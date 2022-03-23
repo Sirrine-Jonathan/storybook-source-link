@@ -1,15 +1,15 @@
 {
-  "name": "storybook-addon-kit",
+  "name": "storybook-source-link",
   "version": "0.0.0",
-  "description": "everything you need to build a Storybook addon",
+  "description": "Provides a link to the story's source in the toolbar",
   "keywords": [
-    "storybook-addons"
+    "source", "link", "repo", "storybook-addons"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/storybookjs/storybook-addon-kit"
+    "url": "https://github.com/Sirrine-Jonathan/storybook-source-link"
   },
-  "author": "package-author",
+  "author": "Jonathan Sirrine <sirrineprogramming@gmail.com>",
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -80,9 +80,9 @@
     "access": "public"
   },
   "storybook": {
-    "displayName": "Addon Kit",
+    "displayName": "Source Link",
     "supportedFrameworks": [
-      "supported-frameworks"
+      "react", "vue", "angular", "web-components", "ember", "html", "svelte", "preact", "react-native"
     ],
     "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
   }
