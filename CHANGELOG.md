@@ -2,6 +2,21 @@
 
 #### ⚠️ Pushed to `main`
 
+- removed post install script ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+- updated package.json ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+- project setup ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+- update .gitignore ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+
+#### Authors: 1
+
+- Jonathan ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+
+---
+
+# v1.0.1 (Wed Mar 23 2022)
+
+#### ⚠️ Pushed to `main`
+
 - updated package.json (jonathansirrine@gmail.com)
 - project setup (jonathansirrine@gmail.com)
 - update .gitignore (jonathansirrine@gmail.com)
