@@ -1,6 +1,6 @@
 {
   "name": "storybook-source-link",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Provides a link to the story's source in the toolbar",
   "keywords": [
     "source",
