@@ -1,6 +1,6 @@
 {
   "name": "storybook-source-link",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Provides a link to the story's source in the toolbar",
   "keywords": [
     "source",
@@ -85,15 +85,7 @@
   "storybook": {
     "displayName": "Source Link",
     "supportedFrameworks": [
-      "react",
-      "vue",
-      "angular",
-      "web-components",
-      "ember",
-      "html",
-      "svelte",
-      "preact",
-      "react-native"
+      "react"
     ],
     "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
   }
