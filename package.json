@@ -6,7 +6,7 @@
     "source",
     "link",
     "repo",
-    "storybook-addons"
+    "storybook-addons", "source", "link", "repo orybook-addons", "", "storybook-addons"
   ],
   "repository": {
     "type": "git",
