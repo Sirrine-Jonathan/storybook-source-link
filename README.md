@@ -16,7 +16,7 @@ export default {
 };
 ```
 
-If the parameter is set, the icon which links to the source code in a new tab will be active
+If the parameter is set, clicking the icon button will take you to the source link.
 
 ![Screen Shot 2022-03-23 at 1 15 50 PM](https://user-images.githubusercontent.com/24869532/159789033-8aaa0813-9434-458d-ae2f-c2aae36da426.png)
 
