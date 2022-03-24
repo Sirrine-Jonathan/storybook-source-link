@@ -1,3 +1,15 @@
+# v1.0.7 (Thu Mar 24 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Update README.md ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+
+#### Authors: 1
+
+- Jonathan ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+
+---
+
 # v1.0.1 (Wed Mar 23 2022)
 
 #### ⚠️ Pushed to `main`
