@@ -1,3 +1,16 @@
+# v1.0.8 (Fri Mar 25 2022)
+
+#### ⚠️ Pushed to `main`
+
+- add missing DEFAULT_PARAM_KEY const ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+- add default source link in .storybook/preview.js ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+
+#### Authors: 1
+
+- Jonathan ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+
+---
+
 # v1.0.7 (Thu Mar 24 2022)
 
 #### ⚠️ Pushed to `main`
