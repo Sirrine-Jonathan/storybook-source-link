@@ -15,7 +15,9 @@ const Tooltip = () => (
 );
 
 export const Tool = () => {
-  const link = useParameter(PARAM_KEY, null);
+  const defaultLink = useParameter(DEFAULT_PARAM_KEY, null);
+  const link = useParameter(PARAM_KEY, defaultLink);
+
 
   return (
     link ?
