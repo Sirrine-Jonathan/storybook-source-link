@@ -1,12 +1,12 @@
 # Storybook Addon Source Link
 
-Provides a link to the story's source in the toolbar. Initialized with this [template](https://github.com/storybookjs/addon-kit). There you'll find specifics on development and release inside the `README.md`
+Provides a link to the story's source in the toolbar.
 
 ## Usage
 
-Inside each story, include a parameters for your stories source code.
+Inside each story, include a parameter for your story's source code. 
 
-in any `.stories.js` file:
+`*.stories.js`
 
 ```
 export default {
