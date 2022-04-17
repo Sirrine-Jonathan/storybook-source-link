@@ -1,7 +1,7 @@
 import React from "react";
 import { Icons, IconButton, TooltipMessage, WithTooltip } from "@storybook/components";
 import { TOOL_ID } from "./constants";
-import { PARAM_KEY, DEFAULT_PARAM_KEY, INFO_LINK } from "./constants";
+import { PARAM_KEY, INFO_LINK } from "./constants";
 import { useParameter } from '@storybook/api';
 
 const Tooltip = () => (
@@ -15,9 +15,7 @@ const Tooltip = () => (
 );
 
 export const Tool = () => {
-  const defaultLink = useParameter(DEFAULT_PARAM_KEY, null);
-  const link = useParameter(PARAM_KEY, defaultLink);
-
+  const link = useParameter(PARAM_KEY, null);
 
   return (
     link ?

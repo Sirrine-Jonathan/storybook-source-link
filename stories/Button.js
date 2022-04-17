@@ -5,14 +5,15 @@ import "./button.css";
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
+export const Button = ({ mode, backgroundColor, size, label, ...props }) => {
+  let modeClass = "storybook-button-default"
+  if (mode === 'primary') modeClass = "storybook-button--primary"
+  else if (mode === 'secondary') modeClass = "storybook-button--secondary";
+
   return (
     <button
       type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
+      className={["storybook-button", `storybook-button--${size}`, modeClass].join(
         " "
       )}
       style={backgroundColor && { backgroundColor }}
@@ -27,7 +28,7 @@ Button.propTypes = {
   /**
    * Is this the principal call to action on the page?
    */
-  primary: PropTypes.bool,
+  mode: PropTypes.oneOf(["primary", "secondary"]),
   /**
    * What background color to use
    */
