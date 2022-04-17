@@ -1,4 +1,5 @@
 # Storybook Addon Source Link
+![npm](https://img.shields.io/npm/v/storybook-source-link) ![npm](https://img.shields.io/npm/dw/storybook-source-link)
 
 Provides a link to the story's source in the toolbar.
 
