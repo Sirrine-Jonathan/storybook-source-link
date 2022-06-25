@@ -1,6 +1,6 @@
 {
   "name": "storybook-addon-external-links",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Provides a link to the story's source in the toolbar",
   "keywords": [
     "source",
