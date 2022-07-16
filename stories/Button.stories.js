@@ -7,7 +7,7 @@ export default {
   title: 'Example/Button',
   component: Button,
   parameters: {
-    sourceLink: 'https://github.com/Sirrine-Jonathan/storybook-source-link/blob/main/stories/Button.js'
+    sourceLink: 'Button.js'
   }
 };
 
@@ -15,6 +15,7 @@ export const Default = ({...args}) => <Button {...args} />
 Default.args = {
   label: 'Default'
 }
+
 export const Primary = ({...args}) => <ButtonPrimary {...args} />
 Primary.args = {
   label: 'Primary'
@@ -27,8 +28,9 @@ Primary.argTypes = {
   }
 }
 Primary.parameters = {
-  sourceLink: 'https://github.com/Sirrine-Jonathan/storybook-source-link/blob/main/stories/ButtonPrimary.js'
+  sourceLink: 'ButtonPrimary.js'
 }
+
 export const Secondary = ({...args}) => <ButtonSecondary {...args}/>
 Secondary.args = {
   label: 'Secondary'
@@ -39,7 +41,4 @@ Secondary.argTypes = {
       disable: true
     }
   }
-}
-Secondary.parameters = {
-  sourceLink: 'https://github.com/Sirrine-Jonathan/storybook-source-link/blob/main/stories/ButtonSecondary.js'
 }

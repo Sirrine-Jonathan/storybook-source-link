@@ -1,7 +1,6 @@
 import React from "react";
 import { Icons, IconButton, TooltipMessage, WithTooltip } from "@storybook/components";
-import { TOOL_ID } from "./constants";
-import { PARAM_KEY, INFO_LINK } from "./constants";
+import { PARAM_KEY, PREFIX_PARAM_KEY, INFO_LINK, TOOL_ID } from "./constants";
 import { useParameter } from '@storybook/api';
 
 const Tooltip = () => (
@@ -15,7 +14,10 @@ const Tooltip = () => (
 );
 
 export const Tool = () => {
-  const link = useParameter(PARAM_KEY, null);
+  let link = useParameter(PARAM_KEY, null);
+  let prefix = useParameter(PREFIX_PARAM_KEY, null)
+  if (!link) prefix = null // let's not allow a prefix without a link
+  if (prefix) link = `${prefix}${link}`
 
   return (
     link ?
