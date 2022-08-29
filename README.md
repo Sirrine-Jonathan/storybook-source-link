@@ -12,10 +12,34 @@
 
 Provides a link to the story's source in the toolbar.
 
-## Usage
+
+<h2 id="installation">Installation</h2>
+
+```bash
+npm install storybook-source-link
+```
+<br />
+
+![Screen Shot 2022-03-23 at 1 15 50 PM](https://user-images.githubusercontent.com/24869532/159789033-8aaa0813-9434-458d-ae2f-c2aae36da426.png)  
+<small>Without any additional configuration,  
+you should see a new link in the toolbar</small>
+
+<h2 id="usage">Usage</h2>
 
 Define a `sourceLink` parameter, or a `sourceLinkPrefix` parameter, both globally, at the component level, and/or at the story level.
-See the [rules of parameter inheritance](https://storybook.js.org/docs/react/writing-stories/parameters#rules-of-parameter-inheritance)
+See the [rules of parameter inheritance](https://storybook.js.org/docs/react/writing-stories/parameters#rules-of-parameter-inheritance). This allows you control how the link is generated for each story.
+
+Here is how the link is generated give the parameters:
+```js
+  let link = useParameter(PARAM_KEY, null);
+  let prefix = useParameter(PREFIX_PARAM_KEY, null)
+  if (!link) prefix = ''
+  if (prefix) link = `${prefix}${link}`
+```
+See [full source](https://github.com/Sirrine-Jonathan/storybook-source-link/blob/main/src/Tool.tsx) for how it's rendered.
+
+
+<h3 id="global-level">Global level</h3>
 
 You may set global parameters to define a default link in the `.storybook/preview.js` file like so:
 
@@ -55,6 +79,8 @@ export const parameters = {
 }
 ```
 
+<h3 id="component-level">Component level</h3>
+
 For more fine tuning, inside each component you may define the same parameters to be used for every story inside the component.
 
 `*.stories.js`
@@ -83,102 +109,150 @@ export default {
 };
 ```
 
-The params defined at the component level supercede those defined at the global level in the `.storybook/preview.js` file.
+The params defined at the component level supersede those defined at the global level in the `.storybook/preview.js` file.
 
-This can be done at the story level as well to override both the global settings and the component level settings.
+<h3 id="story-level">Story level</h3>
 
-For each story requiring more specific treatment in each `*.stories.js` file, define a `sourceLink` parameter  
+This can be done at the story level to override both the global settings and the component level settings.
+
+For each story requiring more specific treatment, in each `*.stories.js` file define a `sourceLink` parameter  
 or both a `sourceLinkPrefix` and a `sourceLink` parameter like so:
 
 ```js
-export const Primary = () => (
+export const PrimaryStory = () => (
   <Button>Primary</Button>
 );
-Primary.parameters = {
+PrimaryStory.parameters = {
   sourceLink: '<link to source>'
   sourceLinkPrefix: '<prefix to link>'
 };
 ```
 
-If the parameter is set, clicking the icon button will take you to the resolved source link.
+<h2 id="outcomes">Outcomes of all parameter configurations</h2>
 
-![Screen Shot 2022-03-23 at 1 15 50 PM](https://user-images.githubusercontent.com/24869532/159789033-8aaa0813-9434-458d-ae2f-c2aae36da426.png)
-
-The icon will be inactive if the params resolve to only a prefix and no link.
-This would be the case for all stories if you define only a `sourceLinkPrefix` parameter gobally, and no `sourceLink` parameter in any component or story.
-
-If an inactive source link is clicked, a tool-top will remind the user of this usage.
-
-## Outcomes of all parameter configurations
+The tables below are to help you get an idea of what to expect when you click the icon.
 
 Keep in mind that some of the possible configurations can result in links that may not have been intended.  
 For example, if you set a sourceLinkPrefix param on the story but not a sourceLink, the prefix set on the story will be used with the next sourceLink param defined upwards in the hierarchy. You can end up with a link that doesn't make sense.  
 
-***It almost always is the case that you want to set a sourceLink param wherever you are setting a sourceLinkPrefix.***
+***It almost always is the case that you want to set a sourceLink param wherever you are setting a sourceLinkPrefix at the component or story level.***
 
-| sourceLinkPrefix in preview.js | sourceLink in preview.js | sourceLinkPrefix in component | sourceLink in component | sourceLinkPrefix in story | sourceLink in story |           link                  |
-|:------------------------------:|:------------------------:|:-----------------------------:|:-----------------------:|:-------------------------:|:-------------------:|:-------------------------------:|
-|                ✔               |             ✔            |               ✔               |            ✔            |             ✔             |          ✔          | story-prefix:story-link         |
-|                ✔               |             ✔            |               ✔               |            ✔            |             ✔             |                     | story-prefix:component-link     |
-|                ✔               |             ✔            |               ✔               |            ✔            |                           |          ✔          | component-prefix:story-link     |
-|                ✔               |             ✔            |               ✔               |            ✔            |                           |                     | component-prefix:component-link |
-|                ✔               |             ✔            |               ✔               |                         |             ✔             |          ✔          | story-prefix:story-link         |
-|                ✔               |             ✔            |               ✔               |                         |             ✔             |                     | story-prefix:preview-link       |
-|                ✔               |             ✔            |               ✔               |                         |                           |          ✔          | component-prefix:story-link     |
-|                ✔               |             ✔            |               ✔               |                         |                           |                     | component-prefix:preview-link   |
-|                ✔               |             ✔            |                               |            ✔            |             ✔             |          ✔          | story-prefix:story-link         |
-|                ✔               |             ✔            |                               |            ✔            |             ✔             |                     | story-prefix:component-link     |
-|                ✔               |             ✔            |                               |            ✔            |                           |          ✔          | preview-prefix:story-link       |
-|                ✔               |             ✔            |                               |            ✔            |                           |                     | preview-prefix:component-link   |
-|                ✔               |             ✔            |                               |                         |             ✔             |          ✔          | story-prefix:story-link         |
-|                ✔               |             ✔            |                               |                         |             ✔             |                     | story-prefix:preview-link       |
-|                ✔               |             ✔            |                               |                         |                           |          ✔          | preview-prefix:story-link       |
-|                ✔               |             ✔            |                               |                         |                           |                     | preview-prefix:preview-link     |
-|                ✔               |                          |               ✔               |            ✔            |             ✔             |          ✔          | story-prefix:story-link         |
-|                ✔               |                          |               ✔               |            ✔            |             ✔             |                     | story-prefix:component-link     |
-|                ✔               |                          |               ✔               |            ✔            |                           |          ✔          | component-prefix:story-link     |
-|                ✔               |                          |               ✔               |            ✔            |                           |                     | component-prefix:component-link |
-|                ✔               |                          |               ✔               |                         |             ✔             |          ✔          | story-prefix:story-link         |
-|                ✔               |                          |               ✔               |                         |             ✔             |                     | link to info                    |
-|                ✔               |                          |               ✔               |                         |                           |          ✔          | component-prefix:story-link     |
-|                ✔               |                          |               ✔               |                         |                           |                     | link to info                    |
-|                ✔               |                          |                               |            ✔            |             ✔             |          ✔          | story-prefix:story-link         |
-|                ✔               |                          |                               |            ✔            |             ✔             |                     | story-prefix:component-link     |
-|                ✔               |                          |                               |            ✔            |                           |          ✔          | preview-prefix:story-link       |
-|                ✔               |                          |                               |            ✔            |                           |                     | link to info                    |
-|                ✔               |                          |                               |                         |             ✔             |          ✔          | story-prefix:story-link         |
-|                ✔               |                          |                               |                         |             ✔             |                     | link to info                    |
-|                ✔               |                          |                               |                         |                           |          ✔          | preview-prefix:story-link       |
-|                ✔               |                          |                               |                         |                           |                     | link to info                    |
-|                                |             ✔            |               ✔               |            ✔            |             ✔             |          ✔          | story-prefix:story-link         |
-|                                |             ✔            |               ✔               |            ✔            |             ✔             |                     | story-prefix:component-link     |
-|                                |             ✔            |               ✔               |            ✔            |                           |          ✔          | component-prefix:story-link     |
-|                                |             ✔            |               ✔               |            ✔            |                           |                     | component-prefix:component-link |
-|                                |             ✔            |               ✔               |                         |             ✔             |          ✔          | story-prefix:story-link         |
-|                                |             ✔            |               ✔               |                         |             ✔             |                     | story-prefix:component-link     |
-|                                |             ✔            |               ✔               |                         |                           |          ✔          | component-prefix:story-link     |
-|                                |             ✔            |               ✔               |                         |                           |                     | component-prefix:preview-link   |
-|                                |             ✔            |                               |            ✔            |             ✔             |          ✔          | story-prefix:story-link         |
-|                                |             ✔            |                               |            ✔            |             ✔             |                     | story-prefix:component-link     |
-|                                |             ✔            |                               |            ✔            |                           |          ✔          | story-link                      |
-|                                |             ✔            |                               |            ✔            |                           |                     | component-link                  |
-|                                |             ✔            |                               |                         |             ✔             |          ✔          | story-prefix:story-link         |
-|                                |             ✔            |                               |                         |             ✔             |                     | story-prefix:preview-link       |
-|                                |             ✔            |                               |                         |                           |          ✔          | story-link                      |
-|                                |             ✔            |                               |                         |                           |                     | preview-link                    |
-|                                |                          |               ✔               |            ✔            |             ✔             |          ✔          | story-prefix:story-link         |
-|                                |                          |               ✔               |            ✔            |             ✔             |                     | story-prefix:component-link     |
-|                                |                          |               ✔               |            ✔            |                           |          ✔          | component-prefix:story-link     |
-|                                |                          |               ✔               |            ✔            |                           |                     | component-prefix:component-link |
-|                                |                          |               ✔               |                         |             ✔             |          ✔          | story-prefix:story-link         |
-|                                |                          |               ✔               |                         |             ✔             |                     | link to info                    |
-|                                |                          |               ✔               |                         |                           |          ✔          | component-prefix:story-link     |
-|                                |                          |               ✔               |                         |                           |                     | link to info                    |
-|                                |                          |                               |            ✔            |             ✔             |          ✔          | story-prefix:story-link         |
-|                                |                          |                               |            ✔            |             ✔             |                     | story-prefix:component-link     |
-|                                |                          |                               |            ✔            |                           |          ✔          | story-link                      |
-|                                |                          |                               |            ✔            |                           |                     | preview-prefix:component-link   |
-|                                |                          |                               |                         |             ✔             |          ✔          | story-prefix:story-link         |
-|                                |                          |                               |                         |             ✔             |                     | link to info                    |
-|                                |                          |                               |                         |                           |          ✔          | story-link                      |
-|                                |                          |                               |                         |                           |                     | link to info                    |
+<br />
+
+✅ &nbsp;&nbsp;sourceLink  
+✅ &nbsp;&nbsp;sourceLinkPrefix
+```js
+export const parameters = {
+  // .storybook/preview.js
+  sourceLink: '<link to source>'
+  sourceLinkPrefix: '<prefix to link>'
+}
+```
+
+| sourceLinkPrefix in component | sourceLink in component | sourceLinkPrefix in story | sourceLink in story |           link                  |
+|:-----------------------------:|:-----------------------:|:-------------------------:|:-------------------:|:-------------------------------:|
+|               ✔               |            ✔            |             ✔             |          ✔          | story-prefix:story-link         |
+|               ✔               |            ✔            |             ✔             |                     | story-prefix:component-link     |
+|               ✔               |            ✔            |                           |          ✔          | component-prefix:story-link     |
+|               ✔               |            ✔            |                           |                     | component-prefix:component-link |
+|               ✔               |                         |             ✔             |          ✔          | story-prefix:story-link         |
+|               ✔               |                         |             ✔             |                     | story-prefix:preview-link       |
+|               ✔               |                         |                           |          ✔          | component-prefix:story-link     |
+|               ✔               |                         |                           |                     | component-prefix:preview-link   |
+|                               |            ✔            |             ✔             |          ✔          | story-prefix:story-link         |
+|                               |            ✔            |             ✔             |                     | story-prefix:component-link     |
+|                               |            ✔            |                           |          ✔          | preview-prefix:story-link       |
+|                               |            ✔            |                           |                     | preview-prefix:component-link   |
+|                               |                         |             ✔             |          ✔          | story-prefix:story-link         |
+|                               |                         |             ✔             |                     | story-prefix:preview-link       |
+|                               |                         |                           |          ✔          | preview-prefix:story-link       |
+|                               |                         |                           |                     | preview-prefix:preview-link     |
+
+<br /> 
+
+✅ &nbsp;&nbsp;sourceLink  
+❌ &nbsp;&nbsp;sourceLinkPrefix
+```js
+export const parameters = {
+  // .storybook/preview.js
+  sourceLink: '<link to source>'
+}
+```
+
+| sourceLinkPrefix in component | sourceLink in component | sourceLinkPrefix in story | sourceLink in story |           link                  |
+|:-----------------------------:|:-----------------------:|:-------------------------:|:-------------------:|:-------------------------------:|
+|               ✔               |            ✔            |             ✔             |          ✔          | story-prefix:story-link         |
+|               ✔               |            ✔            |             ✔             |                     | story-prefix:component-link     |
+|               ✔               |            ✔            |                           |          ✔          | component-prefix:story-link     |
+|               ✔               |            ✔            |                           |                     | component-prefix:component-link |
+|               ✔               |                         |             ✔             |          ✔          | story-prefix:story-link         |
+|               ✔               |                         |             ✔             |                     | link to info                    |
+|               ✔               |                         |                           |          ✔          | component-prefix:story-link     |
+|               ✔               |                         |                           |                     | link to info                    |
+|                               |            ✔            |             ✔             |          ✔          | story-prefix:story-link         |
+|                               |            ✔            |             ✔             |                     | story-prefix:component-link     |
+|                               |            ✔            |                           |          ✔          | preview-prefix:story-link       |
+|                               |            ✔            |                           |                     | link to info                    |
+|                               |                         |             ✔             |          ✔          | story-prefix:story-link         |
+|                               |                         |             ✔             |                     | link to info                    |
+|                               |                         |                           |          ✔          | preview-prefix:story-link       |
+|                               |                         |                           |                     | link to info                    |
+
+<br /> 
+
+❌ &nbsp;&nbsp;sourceLink  
+✅ &nbsp;&nbsp;sourceLinkPrefix
+```js
+export const parameters = {
+  // .storybook/preview.js
+  sourceLinkPrefix: '<prefix to link>'
+}
+```
+
+| sourceLinkPrefix in component | sourceLink in component | sourceLinkPrefix in story | sourceLink in story |           link                  |
+|:-----------------------------:|:-----------------------:|:-------------------------:|:-------------------:|:-------------------------------:|
+|               ✔               |            ✔            |             ✔             |          ✔          | story-prefix:story-link         |
+|               ✔               |            ✔            |             ✔             |                     | story-prefix:component-link     |
+|               ✔               |            ✔            |                           |          ✔          | component-prefix:story-link     |
+|               ✔               |            ✔            |                           |                     | component-prefix:component-link |
+|               ✔               |                         |             ✔             |          ✔          | story-prefix:story-link         |
+|               ✔               |                         |             ✔             |                     | story-prefix:component-link     |
+|               ✔               |                         |                           |          ✔          | component-prefix:story-link     |
+|               ✔               |                         |                           |                     | component-prefix:preview-link   |
+|                               |            ✔            |             ✔             |          ✔          | story-prefix:story-link         |
+|                               |            ✔            |             ✔             |                     | story-prefix:component-link     |
+|                               |            ✔            |                           |          ✔          | story-link                      |
+|                               |            ✔            |                           |                     | component-link                  |
+|                               |                         |             ✔             |          ✔          | story-prefix:story-link         |
+|                               |                         |             ✔             |                     | story-prefix:preview-link       |
+|                               |                         |                           |          ✔          | story-link                      |
+|                               |                         |                           |                     | preview-link                    |
+
+<br /> 
+
+❌ &nbsp;&nbsp;sourceLink  
+❌ &nbsp;&nbsp;sourceLinkPrefix
+```js
+export const parameters = {
+  // .storybook/preview.js
+}
+```
+
+| sourceLinkPrefix in component | sourceLink in component | sourceLinkPrefix in story | sourceLink in story |           link                  |
+|:-----------------------------:|:-----------------------:|:-------------------------:|:-------------------:|:-------------------------------:|
+|               ✔               |            ✔            |             ✔             |          ✔          | story-prefix:story-link         |
+|               ✔               |            ✔            |             ✔             |                     | story-prefix:component-link     |
+|               ✔               |            ✔            |                           |          ✔          | component-prefix:story-link     |
+|               ✔               |            ✔            |                           |                     | component-prefix:component-link |
+|               ✔               |                         |             ✔             |          ✔          | story-prefix:story-link         |
+|               ✔               |                         |             ✔             |                     | link to info                    |
+|               ✔               |                         |                           |          ✔          | component-prefix:story-link     |
+|               ✔               |                         |                           |                     | link to info                    |
+|                               |            ✔            |             ✔             |          ✔          | story-prefix:story-link         |
+|                               |            ✔            |             ✔             |                     | story-prefix:component-link     |
+|                               |            ✔            |                           |          ✔          | story-link                      |
+|                               |            ✔            |                           |                     | preview-prefix:component-link   |
+|                               |                         |             ✔             |          ✔          | story-prefix:story-link         |
+|                               |                         |             ✔             |                     | link to info                    |
+|                               |                         |                           |          ✔          | story-link                      |
+|                               |                         |                           |                     | link to info                    |
