@@ -16,7 +16,7 @@ const Tooltip = () => (
 export const Tool = () => {
   let link = useParameter(PARAM_KEY, null);
   let prefix = useParameter(PREFIX_PARAM_KEY, null)
-  if (!link) prefix = null // let's not allow a prefix without a link
+  if (!link) prefix = ''
   if (prefix) link = `${prefix}${link}`
 
   return (
