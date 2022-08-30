@@ -140,7 +140,7 @@ For example, if you set a sourceLinkPrefix param on the story but not a sourceLi
 
 <br />
 
-✅ &nbsp;&nbsp;sourceLinkPrefix
+✅ &nbsp;&nbsp;sourceLinkPrefix  
 ✅ &nbsp;&nbsp;sourceLink  
 ```js
 export const parameters = {
@@ -171,7 +171,7 @@ export const parameters = {
 
 <br /> 
 
-✅ &nbsp;&nbsp;sourceLinkPrefix
+✅ &nbsp;&nbsp;sourceLinkPrefix  
 ❌ &nbsp;&nbsp;sourceLink  
 ```js
 export const parameters = {
@@ -201,7 +201,7 @@ export const parameters = {
 
 <br /> 
 
-❌ &nbsp;&nbsp;sourceLinkPrefix
+❌ &nbsp;&nbsp;sourceLinkPrefix  
 ✅ &nbsp;&nbsp;sourceLink  
 ```js
 export const parameters = {
@@ -231,7 +231,7 @@ export const parameters = {
 
 <br /> 
 
-❌ &nbsp;&nbsp;sourceLinkPrefix
+❌ &nbsp;&nbsp;sourceLinkPrefix  
 ❌ &nbsp;&nbsp;sourceLink  
 ```js
 export const parameters = {
