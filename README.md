@@ -29,12 +29,13 @@ you should see a new link in the toolbar</small>
 Define a `sourceLink` parameter, or a `sourceLinkPrefix` parameter, both globally, at the component level, and/or at the story level.
 See the [rules of parameter inheritance](https://storybook.js.org/docs/react/writing-stories/parameters#rules-of-parameter-inheritance). This allows you control how the link is generated for each story.
 
-Here is how the link is generated give the parameters:
-```js
-  let link = useParameter(PARAM_KEY, null);
-  let prefix = useParameter(PREFIX_PARAM_KEY, null)
-  if (!link) prefix = ''
-  if (prefix) link = `${prefix}${link}`
+Here's the relevant code which governs how the link gets generated:
+```ts
+  const getLink = (prefix: string | undefined, link: string | undefined) => {
+    if (!link) return null;
+    if (prefix) link = `${prefix}${link}`
+    return link
+  }
 ```
 See [full source](https://github.com/Sirrine-Jonathan/storybook-source-link/blob/main/src/Tool.tsx) for how it's rendered.
 
@@ -139,8 +140,8 @@ For example, if you set a sourceLinkPrefix param on the story but not a sourceLi
 
 <br />
 
-✅ &nbsp;&nbsp;sourceLink  
 ✅ &nbsp;&nbsp;sourceLinkPrefix
+✅ &nbsp;&nbsp;sourceLink  
 ```js
 export const parameters = {
   // .storybook/preview.js
@@ -170,8 +171,8 @@ export const parameters = {
 
 <br /> 
 
-✅ &nbsp;&nbsp;sourceLink  
-❌ &nbsp;&nbsp;sourceLinkPrefix
+✅ &nbsp;&nbsp;sourceLinkPrefix
+❌ &nbsp;&nbsp;sourceLink  
 ```js
 export const parameters = {
   // .storybook/preview.js
@@ -200,8 +201,8 @@ export const parameters = {
 
 <br /> 
 
-❌ &nbsp;&nbsp;sourceLink  
-✅ &nbsp;&nbsp;sourceLinkPrefix
+❌ &nbsp;&nbsp;sourceLinkPrefix
+✅ &nbsp;&nbsp;sourceLink  
 ```js
 export const parameters = {
   // .storybook/preview.js
@@ -230,8 +231,8 @@ export const parameters = {
 
 <br /> 
 
-❌ &nbsp;&nbsp;sourceLink  
 ❌ &nbsp;&nbsp;sourceLinkPrefix
+❌ &nbsp;&nbsp;sourceLink  
 ```js
 export const parameters = {
   // .storybook/preview.js

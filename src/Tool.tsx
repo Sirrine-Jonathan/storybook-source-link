@@ -13,17 +13,22 @@ const Tooltip = () => (
   />
 );
 
-export const Tool = () => {
-  let link = useParameter(PARAM_KEY, null);
-  let prefix = useParameter(PREFIX_PARAM_KEY, null)
-  if (!link) prefix = ''
+export const getLink = (prefix: string | undefined, link: string | undefined) => {
+  if (!link) return null;
   if (prefix) link = `${prefix}${link}`
+  return link
+}
+
+export const Tool = () => {
+  let param_link = useParameter(PARAM_KEY, null)
+  let param_prefix = useParameter(PREFIX_PARAM_KEY, null)
+  const link = getLink(param_prefix, param_link)
 
   return (
     link ?
     <IconButton
       key={TOOL_ID}
-      title="View Source Repository"
+      title={`View Source Repository: ${link}`}
       active={true}
       onClick={() => {
         if (link){

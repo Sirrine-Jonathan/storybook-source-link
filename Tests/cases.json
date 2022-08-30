@@ -1,0 +1,258 @@
+[
+    {
+      "storyName": "BOTH:BOTH:BOTH",
+      "expectedLink": "story-prefix:story-link"
+    },
+    {
+      "storyName": "BOTH:BOTH:JUST_PREFIX",
+      "expectedLink": "story-prefix:component-link"
+    },
+    {
+      "storyName": "BOTH:BOTH:JUST_LINK",
+      "expectedLink": "component-prefix:story-link"
+    },
+    {
+      "storyName": "BOTH:BOTH:NONE",
+      "expectedLink": "component-prefix:component-link"
+    },
+    {
+      "storyName": "BOTH:JUST_PREFIX:BOTH",
+      "expectedLink": "story-prefix:story-link"
+    },
+    {
+      "storyName": "BOTH:JUST_PREFIX:JUST_PREFIX",
+      "expectedLink": "story-prefix:preview-link"
+    },
+    {
+      "storyName": "BOTH:JUST_PREFIX:JUST_LINK",
+      "expectedLink": "component-prefix:story-link"
+    },
+    {
+      "storyName": "BOTH:JUST_PREFIX:NONE",
+      "expectedLink": "component-prefix:preview-link"
+    },
+    {
+      "storyName": "BOTH:JUST_LINK:BOTH",
+      "expectedLink": "story-prefix:story-link"
+    },
+    {
+      "storyName": "BOTH:JUST_LINK:JUST_PREFIX",
+      "expectedLink": "story-prefix:component-link"
+    },
+    {
+      "storyName": "BOTH:JUST_LINK:JUST_LINK",
+      "expectedLink": "preview-prefix:story-link"
+    },
+    {
+      "storyName": "BOTH:JUST_LINK:NONE",
+      "expectedLink": "preview-prefix:component-link"
+    },
+    {
+      "storyName": "BOTH:NONE:BOTH",
+      "expectedLink": "story-prefix:story-link"
+    },
+    {
+      "storyName": "BOTH:NONE:JUST_PREFIX",
+      "expectedLink": "story-prefix:preview-link"
+    },
+    {
+      "storyName": "BOTH:NONE:JUST_LINK",
+      "expectedLink": "preview-prefix:story-link"
+    },
+    {
+      "storyName": "BOTH:NONE:NONE",
+      "expectedLink": "preview-prefix:preview-link"
+    },
+    {
+      "storyName": "JUST_PREFIX:BOTH:BOTH",
+      "expectedLink": "story-prefix:story-link"
+    },
+    {
+      "storyName": "JUST_PREFIX:BOTH:JUST_PREFIX",
+      "expectedLink": "story-prefix:component-link"
+    },
+    {
+      "storyName": "JUST_PREFIX:BOTH:JUST_LINK",
+      "expectedLink": "component-prefix:story-link"
+    },
+    {
+      "storyName": "JUST_PREFIX:BOTH:NONE",
+      "expectedLink": "component-prefix:component-link"
+    },
+    {
+      "storyName": "JUST_PREFIX:JUST_PREFIX:BOTH",
+      "expectedLink": "story-prefix:story-link"
+    },
+    {
+      "storyName": "JUST_PREFIX:JUST_PREFIX:JUST_PREFIX",
+      "expectedLink": null
+    },
+    {
+      "storyName": "JUST_PREFIX:JUST_PREFIX:JUST_LINK",
+      "expectedLink": "component-prefix:story-link"
+    },
+    {
+      "storyName": "JUST_PREFIX:JUST_PREFIX:NONE",
+      "expectedLink": null
+    },
+    {
+      "storyName": "JUST_PREFIX:JUST_LINK:BOTH",
+      "expectedLink": "story-prefix:story-link"
+    },
+    {
+      "storyName": "JUST_PREFIX:JUST_LINK:JUST_PREFIX",
+      "expectedLink": "story-prefix:component-link"
+    },
+    {
+      "storyName": "JUST_PREFIX:JUST_LINK:JUST_LINK",
+      "expectedLink": "preview-prefix:story-link"
+    },
+    {
+      "storyName": "JUST_PREFIX:JUST_LINK:NONE",
+      "expectedLink": "preview-prefix:component-link"
+    },
+    {
+      "storyName": "JUST_PREFIX:NONE:BOTH",
+      "expectedLink": "story-prefix:story-link"
+    },
+    {
+      "storyName": "JUST_PREFIX:NONE:JUST_PREFIX",
+      "expectedLink": null
+    },
+    {
+      "storyName": "JUST_PREFIX:NONE:JUST_LINK",
+      "expectedLink": "preview-prefix:story-link"
+    },
+    {
+      "storyName": "JUST_PREFIX:NONE:NONE",
+      "expectedLink": null
+    },
+    {
+      "storyName": "JUST_LINK:BOTH:BOTH",
+      "expectedLink": "story-prefix:story-link"
+    },
+    {
+      "storyName": "JUST_LINK:BOTH:JUST_PREFIX",
+      "expectedLink": "story-prefix:component-link"
+    },
+    {
+      "storyName": "JUST_LINK:BOTH:JUST_LINK",
+      "expectedLink": "component-prefix:story-link"
+    },
+    {
+      "storyName": "JUST_LINK:BOTH:NONE",
+      "expectedLink": "component-prefix:component-link"
+    },
+    {
+      "storyName": "JUST_LINK:JUST_PREFIX:BOTH",
+      "expectedLink": "story-prefix:story-link"
+    },
+    {
+      "storyName": "JUST_LINK:JUST_PREFIX:JUST_PREFIX",
+      "expectedLink": "story-prefix:preview-link"
+    },
+    {
+      "storyName": "JUST_LINK:JUST_PREFIX:JUST_LINK",
+      "expectedLink": "component-prefix:story-link"
+    },
+    {
+      "storyName": "JUST_LINK:JUST_PREFIX:NONE",
+      "expectedLink": "component-prefix:preview-link"
+    },
+    {
+      "storyName": "JUST_LINK:JUST_LINK:BOTH",
+      "expectedLink": "story-prefix:story-link"
+    },
+    {
+      "storyName": "JUST_LINK:JUST_LINK:JUST_PREFIX",
+      "expectedLink": "story-prefix:component-link"
+    },
+    {
+      "storyName": "JUST_LINK:JUST_LINK:JUST_LINK",
+      "expectedLink": "story-link"
+    },
+    {
+      "storyName": "JUST_LINK:JUST_LINK:NONE",
+      "expectedLink": "component-link"
+    },
+    {
+      "storyName": "JUST_LINK:NONE:BOTH",
+      "expectedLink": "story-prefix:story-link"
+    },
+    {
+      "storyName": "JUST_LINK:NONE:JUST_PREFIX",
+      "expectedLink": "story-prefix:preview-link"
+    },
+    {
+      "storyName": "JUST_LINK:NONE:JUST_LINK",
+      "expectedLink": "story-link"
+    },
+    {
+      "storyName": "JUST_LINK:NONE:NONE",
+      "expectedLink": "preview-link"
+    },
+    {
+      "storyName": "NONE:BOTH:BOTH",
+      "expectedLink": "story-prefix:story-link"
+    },
+    {
+      "storyName": "NONE:BOTH:JUST_PREFIX",
+      "expectedLink": "story-prefix:component-link"
+    },
+    {
+      "storyName": "NONE:BOTH:JUST_LINK",
+      "expectedLink": "component-prefix:story-link"
+    },
+    {
+      "storyName": "NONE:BOTH:NONE",
+      "expectedLink": "component-prefix:component-link"
+    },
+    {
+      "storyName": "NONE:JUST_PREFIX:BOTH",
+      "expectedLink": "story-prefix:story-link"
+    },
+    {
+      "storyName": "NONE:JUST_PREFIX:JUST_PREFIX",
+      "expectedLink": null
+    },
+    {
+      "storyName": "NONE:JUST_PREFIX:JUST_LINK",
+      "expectedLink": "component-prefix:story-link"
+    },
+    {
+      "storyName": "NONE:JUST_PREFIX:NONE",
+      "expectedLink": null
+    },
+    {
+      "storyName": "NONE:JUST_LINK:BOTH",
+      "expectedLink": "story-prefix:story-link"
+    },
+    {
+      "storyName": "NONE:JUST_LINK:JUST_PREFIX",
+      "expectedLink": "story-prefix:component-link"
+    },
+    {
+      "storyName": "NONE:JUST_LINK:JUST_LINK",
+      "expectedLink": "story-link"
+    },
+    {
+      "storyName": "NONE:JUST_LINK:NONE",
+      "expectedLink": "component-link"
+    },
+    {
+      "storyName": "NONE:NONE:BOTH",
+      "expectedLink": "story-prefix:story-link"
+    },
+    {
+      "storyName": "NONE:NONE:JUST_PREFIX",
+      "expectedLink": null
+    },
+    {
+      "storyName": "NONE:NONE:JUST_LINK",
+      "expectedLink": "story-link"
+    },
+    {
+      "storyName": "NONE:NONE:NONE",
+      "expectedLink": null
+    }
+  ]
