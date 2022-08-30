@@ -1,3 +1,16 @@
+# v1.1.1 (Tue Aug 30 2022)
+
+#### 🐛 Bug Fix
+
+- Feature source link prefix [#2](https://github.com/Sirrine-Jonathan/storybook-source-link/pull/2) (jsirrine@ancestry.com [@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+
+#### Authors: 2
+
+- Jonathan ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+- Jonathan Sirrine (jsirrine@ancestry.com)
+
+---
+
 # v1.0.9 (Sun Mar 27 2022)
 
 #### ⚠️ Pushed to `main`
