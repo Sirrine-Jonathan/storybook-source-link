@@ -1,3 +1,18 @@
+# v2.0.2 (Thu Nov 03 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Add .deepsource.toml ([@deepsourcebot](https://github.com/deepsourcebot))
+- Create CONTRIBUTING.md skip ci ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+- Update README.md ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+
+#### Authors: 2
+
+- DeepSource Bot ([@deepsourcebot](https://github.com/deepsourcebot))
+- Jonathan ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+
+---
+
 # v1.1.1 (Tue Aug 30 2022)
 
 #### 🐛 Bug Fix
