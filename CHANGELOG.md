@@ -1,3 +1,15 @@
+# v2.0.3 (Thu Nov 03 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Update .deepsource.toml ([@deepsourcebot](https://github.com/deepsourcebot))
+
+#### Authors: 1
+
+- DeepSource Bot ([@deepsourcebot](https://github.com/deepsourcebot))
+
+---
+
 # v2.0.2 (Thu Nov 03 2022)
 
 #### ⚠️ Pushed to `main`
