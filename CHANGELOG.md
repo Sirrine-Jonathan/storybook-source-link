@@ -1,3 +1,15 @@
+# v2.0.4 (Tue Nov 29 2022)
+
+#### 🐛 Bug Fix
+
+- Allow React 18 as a peer dependency [#4](https://github.com/Sirrine-Jonathan/storybook-source-link/pull/4) ([@darrylblake](https://github.com/darrylblake))
+
+#### Authors: 1
+
+- Darryl Blake ([@darrylblake](https://github.com/darrylblake))
+
+---
+
 # v2.0.3 (Thu Nov 03 2022)
 
 #### ⚠️ Pushed to `main`
