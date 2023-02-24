@@ -1,6 +1,6 @@
 import React from "react";
-import { Icons, IconButton, TooltipMessage, WithTooltip } from "@storybook/components";
-import { PARAM_KEY, PREFIX_PARAM_KEY, INFO_LINK, TOOL_ID } from "./constants";
+import { Icons, IconButton, TooltipMessage, WithTooltip, IconKey } from "@storybook/components";
+import { PARAM_KEY, PREFIX_PARAM_KEY, ICON_PARAM_KEY, INFO_LINK, TOOL_ID } from "./constants";
 import { useParameter } from '@storybook/api';
 
 const Tooltip = () => (
@@ -22,6 +22,7 @@ export const getLink = (prefix: string | undefined, link: string | undefined) =>
 export const Tool = () => {
   let param_link = useParameter(PARAM_KEY, null)
   let param_prefix = useParameter(PREFIX_PARAM_KEY, null)
+  let param_icon = useParameter(ICON_PARAM_KEY, "repository") as IconKey;
   const link = getLink(param_prefix, param_link)
 
   return (
@@ -36,7 +37,7 @@ export const Tool = () => {
         }
       }}
     >
-      <Icons icon="repository" />
+      <Icons icon={param_icon} />
     </IconButton>
     :
     <WithTooltip placement="top" trigger="click" tooltip={<Tooltip />}>
@@ -45,7 +46,7 @@ export const Tool = () => {
         title="View Source Repository"
         active={false}
       >
-        <Icons icon="repository" />
+        <Icons icon={param_icon} />
       </IconButton>
     </WithTooltip>
   );
