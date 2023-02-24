@@ -1,3 +1,15 @@
+# v2.0.5 (Fri Feb 24 2023)
+
+#### 🐛 Bug Fix
+
+- Add ability to customise icon [#7](https://github.com/Sirrine-Jonathan/storybook-source-link/pull/7) ([@richardscarrott](https://github.com/richardscarrott))
+
+#### Authors: 1
+
+- Richard Scarrott ([@richardscarrott](https://github.com/richardscarrott))
+
+---
+
 # v2.0.4 (Tue Nov 29 2022)
 
 #### 🐛 Bug Fix
