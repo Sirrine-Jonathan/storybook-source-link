@@ -1,3 +1,15 @@
+# v2.0.8 (Sat Mar 04 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Update donation button ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+
+#### Authors: 1
+
+- Jonathan ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+
+---
+
 # v2.0.7 (Sat Mar 04 2023)
 
 #### ⚠️ Pushed to `main`
