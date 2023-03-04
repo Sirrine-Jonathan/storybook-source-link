@@ -8,7 +8,7 @@
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/Enirrisky)](https://twitter.com/Enirrisky?ref_src=twsrc%5Etfw)
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/sirrineprog){:target="_blank"}
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/sirrineprog)
 
 
 Provides a link to the story's source in the toolbar.
