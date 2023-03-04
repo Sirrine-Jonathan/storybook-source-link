@@ -1,3 +1,15 @@
+# v2.0.7 (Sat Mar 04 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Add support button ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+
+#### Authors: 1
+
+- Jonathan ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+
+---
+
 # v2.0.5 (Fri Feb 24 2023)
 
 #### 🐛 Bug Fix
