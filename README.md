@@ -5,12 +5,6 @@
 [![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/storybook-source-link?logo=snyk)](https://libraries.io/npm/storybook-source-link) [![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/storybook-source-link?logo=libraries.io&logoColor=white)](https://libraries.io/npm/storybook-source-link) [![Libraries.io SourceRank](https://img.shields.io/librariesio/sourcerank/npm/storybook-source-link?logo=libraries.io&logoColor=white)](https://docs.libraries.io/overview.html#sourcerank)
 
 
-
-[![Twitter Follow](https://img.shields.io/twitter/follow/Enirrisky)](https://twitter.com/Enirrisky?ref_src=twsrc%5Etfw)
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/sirrineprog)
-
-
 Provides a link to the story's source in the toolbar.
 
 
@@ -258,3 +252,10 @@ export const parameters = {
 |                               |                         |             ✔             |                     | link to info                    |
 |                               |                         |                           |          ✔          | story-link                      |
 |                               |                         |                           |                     | link to info                    |
+
+
+
+
+[![Twitter Follow](https://img.shields.io/twitter/follow/Enirrisky)](https://twitter.com/Enirrisky?ref_src=twsrc%5Etfw)
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/sirrineprog)
