@@ -40,6 +40,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/test-runner", "npm:0.15.1"],\
           ["@testing-library/jest-dom", "npm:5.17.0"],\
           ["@testing-library/react", "virtual:e30c29f3fc20545690ba4b983dd6bb250fd755d1379b171b8e7bda40cb14b92f4e63d197a164a2001d2c88184456fc70041c2a74b418c49523635ace79ba2574#npm:13.4.0"],\
+          ["@types/node", "npm:20.9.1"],\
           ["@types/semver", "npm:7.5.5"],\
           ["@types/styled-components", "npm:5.1.30"],\
           ["auto", "npm:10.46.0"],\
@@ -16937,6 +16938,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/test-runner", "npm:0.15.1"],\
           ["@testing-library/jest-dom", "npm:5.17.0"],\
           ["@testing-library/react", "virtual:e30c29f3fc20545690ba4b983dd6bb250fd755d1379b171b8e7bda40cb14b92f4e63d197a164a2001d2c88184456fc70041c2a74b418c49523635ace79ba2574#npm:13.4.0"],\
+          ["@types/node", "npm:20.9.1"],\
           ["@types/semver", "npm:7.5.5"],\
           ["@types/styled-components", "npm:5.1.30"],\
           ["auto", "npm:10.46.0"],\
