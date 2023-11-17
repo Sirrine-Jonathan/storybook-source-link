@@ -1,7 +1,7 @@
 import React from "react";
 import { Icons, IconButton, TooltipMessage, WithTooltip, IconKey } from "@storybook/components";
 import { PARAM_KEY, PREFIX_PARAM_KEY, ICON_PARAM_KEY, INFO_LINK, TOOL_ID } from "./constants";
-import { useParameter } from '@storybook/api';
+import { useParameter } from '@storybook/manager-api';
 
 const Tooltip = () => (
   <TooltipMessage
