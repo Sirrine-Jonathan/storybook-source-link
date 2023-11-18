@@ -5,7 +5,7 @@ const config: StorybookConfig =  {
     "../stories/**/*.stories.js",
   ],
 
-  addons: ["../preset.js", "@storybook/addon-essentials"],
+  addons: ["../preset.js", "@storybook/addon-essentials", "@storybook/components", "@storybook/manager-api", "@storybook/preview-api"],
 
   framework: {
     name: "@storybook/react-webpack5",

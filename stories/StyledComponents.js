@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   font-family: Helvetica, Arial, sans-serif;
   border: 0;
-  border-radius: 3em;
+  border-radius: 6px;
   display: inline-block;
   line-height: 1;
   font-size: 14px;
@@ -13,21 +13,30 @@ export const Wrapper = styled.div`
 `
 
 export const Header = styled.div`
-  background: black;
+  background: linear-gradient(45deg, #052F5F, #005377);
   color: white;
   padding: 10px 20px;
+  border-radius: 6px;
+  font-smooth: always;
   h1 {
     margin-bottom: 25px;
   }
   h2 {
-    font-size: 0.9em;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid #F1A208;
     padding-bottom: 5px;
-    color: red;
+    color: #F1A208;
+    font-weight: 400;
+    
+    span {
+      font-family: courier;
+      font-size: 0.6em;
+      letter-spacing: 1.5px;
+      anti
+    }
     code {
       color: white;
       margin-left: 5px;
-      font-size: 1.4em;
+      font-size: 0.8em;
     }
   }
   h3 {
@@ -37,15 +46,17 @@ export const Header = styled.div`
 
 export const Section = styled.div`
   padding: 5px 20px;
-  background: #eee;
+  background: #D5C67A;
   margin: 15px 0 0;
+  border-radius: 6px;
 `
 
 export const Notes = styled.div`
     padding: 20px;
     margin-top: 15px;
-    background: blue;
+    background: #06A77D;
     color: white;
     line-height: 1.5em;
     font-size: 1.2em;
+    border-radius: 6px;
 `

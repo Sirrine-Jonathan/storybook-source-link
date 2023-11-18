@@ -6,7 +6,7 @@ export const Component = ({ title, expectedLink, notes, details }) => {
         <Wrapper>
             <Header>
                 <h1>{title}</h1>
-                <h2>Expected Link: <code>{expectedLink}</code></h2>
+                <h2><span>Expected Link:</span><code>{expectedLink}</code></h2>
             </Header>
             <Notes>
                 {notes}

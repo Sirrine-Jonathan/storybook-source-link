@@ -9,10 +9,8 @@ export default {
     tags: ['autodocs']
 };
 
-const details = `
-    Component sourceLinkPrefix: ${componentParams.sourceLinkPrefix}
-    Component sourceLink: ${componentParams.sourceLink}
-`
+const details = `Component sourceLinkPrefix: ${componentParams.sourceLinkPrefix}
+Component sourceLink: ${componentParams.sourceLink}`
     
 const Template = (args) => <Component {...args} />;
 
@@ -26,9 +24,9 @@ STORY_WITH_LINK.args = {
     title: 'STORY_WITH_PREFIX',
     notes: `Overrides just the prefix, inheriting the link or suffix part from the preview level`,
     details: `
-        ${details}
-        Story sourceLinkPrefix: ${STORY_WITH_LINK.parameters?.sourceLinkPrefix}
-        Story sourceLink: ${STORY_WITH_LINK.parameters?.sourceLink}
+${details}
+Story sourceLinkPrefix: ${STORY_WITH_LINK.parameters?.sourceLinkPrefix}
+Story sourceLink: ${STORY_WITH_LINK.parameters?.sourceLink}
     `
 };
 
@@ -42,9 +40,9 @@ STORY_WITH_PREFIX.args = {
     title: 'STORY_WITH_PREFIX',
     notes: `Overrides just the prefix, inheriting the link or suffix part from the preview level`,
     details: `
-        ${details}
-        Story sourceLinkPrefix: ${STORY_WITH_PREFIX.parameters?.sourceLinkPrefix}
-        Story sourceLink: ${STORY_WITH_PREFIX.parameters?.sourceLink}
+${details}
+Story sourceLinkPrefix: ${STORY_WITH_PREFIX.parameters?.sourceLinkPrefix}
+Story sourceLink: ${STORY_WITH_PREFIX.parameters?.sourceLink}
     `
 };
 
@@ -56,9 +54,9 @@ STORY_WITHOUT_PARAMS.args = {
     notes: `With no params given to the story, it's left to inherit from the component or preview.
      In this case, it inherits both params from the preview level`,
     details: `
-        ${details}
-        Story sourceLinkPrefix: ${STORY_WITHOUT_PARAMS.parameters?.sourceLinkPrefix}
-        Story sourceLink: ${STORY_WITHOUT_PARAMS.parameters?.sourceLink}
+${details}
+Story sourceLinkPrefix: ${STORY_WITHOUT_PARAMS.parameters?.sourceLinkPrefix}
+Story sourceLink: ${STORY_WITHOUT_PARAMS.parameters?.sourceLink}
     `
 };
 

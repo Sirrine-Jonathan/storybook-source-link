@@ -3,6 +3,8 @@ import { Icons, IconButton, TooltipMessage, WithTooltip } from "@storybook/compo
 import { PARAM_KEY, PREFIX_PARAM_KEY, ICON_PARAM_KEY, INFO_LINK, TOOL_ID } from "./constants";
 import { useParameter } from '@storybook/manager-api';
 
+
+
 const Tooltip = () => (
   <TooltipMessage
     title="Repository Link"
@@ -36,8 +38,9 @@ export const Tool = () => {
           window.open(link)
         }
       }}
+      aria-label={`View Source Repository: ${link}`}
     >
-      <Icons icon={param_icon} />
+      <Icons icon={param_icon as any} />
     </IconButton>
     :
     <WithTooltip placement="top" trigger="click" tooltip={<Tooltip />}>
@@ -46,7 +49,7 @@ export const Tool = () => {
         title="View Source Repository"
         active={false}
       >
-        <Icons icon={param_icon} />
+        <Icons icon={param_icon as any} />
       </IconButton>
     </WithTooltip>
   );

@@ -11,27 +11,25 @@ export default {
     tags: ['autodocs']
 };
 
-const details = `
-    Component sourceLinkPrefix: ${componentParams.sourceLinkPrefix}
-    Component sourceLink: ${componentParams.sourceLink}
-`
+const details = `Component sourceLinkPrefix: ${componentParams.sourceLinkPrefix}
+Component sourceLink: ${componentParams.sourceLink}`
     
 const Template = (args) => <Component {...args} />;
 
 // BOTH:BOTH:BOTH
 export const STORY_WITH_BOTH_PARAMS = Template.bind({});
 STORY_WITH_BOTH_PARAMS.parameters = {
-    sourceLinkPrefix: 'https://www.net',
-    sourceLink: 'flix.com'
+sourceLinkPrefix: 'https://www.net',
+sourceLink: 'flix.com'
 }
 STORY_WITH_BOTH_PARAMS.args = {
     expectedLink: 'https://www.netflix.com/',
     title: 'STORY_WITH_BOTH_PARAMS',
     notes: "No matter what parameters are set at Component or Preview level, Story level supersedes all.",
     details: `
-        ${details}
-        Story sourceLinkPrefix: ${STORY_WITH_BOTH_PARAMS.parameters.sourceLinkPrefix}
-        Story sourceLink: ${STORY_WITH_BOTH_PARAMS.parameters.sourceLink}
+${details}
+Story sourceLinkPrefix: ${STORY_WITH_BOTH_PARAMS.parameters.sourceLinkPrefix}
+Story sourceLink: ${STORY_WITH_BOTH_PARAMS.parameters.sourceLink}
     `
 }
 
@@ -47,9 +45,9 @@ OVERRIDE_COMPONENT_PREFIX.args = {
     notes: `This component illustrates how you can override any parent prefixes by supplying an empty string 
     (no spaces or anything, literally just '') for the sourceLinkPrefix param`,
     details: `
-        ${details}
-        Story sourceLinkPrefix: ${OVERRIDE_COMPONENT_PREFIX.parameters.sourceLinkPrefix}
-        Story sourceLink: ${OVERRIDE_COMPONENT_PREFIX.parameters.sourceLink}
+${details}
+Story sourceLinkPrefix: ${OVERRIDE_COMPONENT_PREFIX.parameters.sourceLinkPrefix}
+Story sourceLink: ${OVERRIDE_COMPONENT_PREFIX.parameters.sourceLink}
     `
 };
 
@@ -66,9 +64,9 @@ OVERRIDE_ALL_WITHOUT_REPLACEMENT.args = {
     The book icon in the corner should not be highlighted for this story, and when you click it a tooltip 
     should appear instead of opening source code in an new tab`,
     details: `
-        ${details}
-        Story sourceLinkPrefix: ${OVERRIDE_ALL_WITHOUT_REPLACEMENT.parameters.sourceLinkPrefix}
-        Story sourceLink: ${OVERRIDE_ALL_WITHOUT_REPLACEMENT.parameters.sourceLink}
+${details}
+Story sourceLinkPrefix: ${OVERRIDE_ALL_WITHOUT_REPLACEMENT.parameters.sourceLinkPrefix}
+Story sourceLink: ${OVERRIDE_ALL_WITHOUT_REPLACEMENT.parameters.sourceLink}
     `
 };
 
@@ -82,9 +80,9 @@ STORY_WITH_ONLY_PREFIX.args = {
     title: 'STORY_WITH_ONLY_PREFIX',
     notes: "Here's what happens if you supply sourceLinkPrefix to the story, but not a sourceLink, leaving it to inherit from the component or preview.",
     details: `
-        ${details}
-        Story sourceLinkPrefix: ${STORY_WITH_ONLY_PREFIX.parameters.sourceLinkPrefix}
-        Story sourceLink: ${STORY_WITH_ONLY_PREFIX.parameters.sourceLink}
+${details}
+Story sourceLinkPrefix: ${STORY_WITH_ONLY_PREFIX.parameters.sourceLinkPrefix}
+Story sourceLink: ${STORY_WITH_ONLY_PREFIX.parameters.sourceLink}
     `
 };
 
@@ -99,9 +97,9 @@ COMPONENT_PREFIX_STORY_LINK.args = {
     notes: `This Component shows how the story link can be used with the component prefix, notice the preview prefix is ignored in this case. 
     This is the only story that makes use of the component prefix as it's intended.`,
     details: `
-        ${details}
-        Story sourceLinkPrefix: ${COMPONENT_PREFIX_STORY_LINK.parameters.sourceLinkPrefix}
-        Story sourceLink: ${COMPONENT_PREFIX_STORY_LINK.parameters.sourceLink}
+${details}
+Story sourceLinkPrefix: ${COMPONENT_PREFIX_STORY_LINK.parameters.sourceLinkPrefix}
+Story sourceLink: ${COMPONENT_PREFIX_STORY_LINK.parameters.sourceLink}
     `
 };
 
@@ -114,9 +112,9 @@ NO_STORY_PARAMS.args = {
     It inherits the preview portion from the component (https://goo), 
     and the link portion from the preview level (ManualTesting/Component.js) which won't make a valid link.`,
     details: `
-        ${details}
-        Story sourceLinkPrefix: ${NO_STORY_PARAMS.parameters?.sourceLinkPrefix}
-        Story sourceLink: ${NO_STORY_PARAMS.parameters?.sourceLink}
+${details}
+Story sourceLinkPrefix: ${NO_STORY_PARAMS.parameters?.sourceLinkPrefix}
+Story sourceLink: ${NO_STORY_PARAMS.parameters?.sourceLink}
     `
 };
 
