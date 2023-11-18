@@ -5,3 +5,6 @@ build-storybook.log
 .DS_Store
 .env
 .npmrc
+
+src/**/*.js
+src/**/*.js.map
