@@ -35,6 +35,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/cli", "npm:7.5.3"],\
           ["@storybook/components", "virtual:e30c29f3fc20545690ba4b983dd6bb250fd755d1379b171b8e7bda40cb14b92f4e63d197a164a2001d2c88184456fc70041c2a74b418c49523635ace79ba2574#npm:7.5.3"],\
           ["@storybook/manager-api", "virtual:e30c29f3fc20545690ba4b983dd6bb250fd755d1379b171b8e7bda40cb14b92f4e63d197a164a2001d2c88184456fc70041c2a74b418c49523635ace79ba2574#npm:7.5.3"],\
+          ["@storybook/preview-api", "npm:7.5.3"],\
           ["@storybook/react", "virtual:e30c29f3fc20545690ba4b983dd6bb250fd755d1379b171b8e7bda40cb14b92f4e63d197a164a2001d2c88184456fc70041c2a74b418c49523635ace79ba2574#npm:7.5.3"],\
           ["@storybook/react-webpack5", "virtual:e30c29f3fc20545690ba4b983dd6bb250fd755d1379b171b8e7bda40cb14b92f4e63d197a164a2001d2c88184456fc70041c2a74b418c49523635ace79ba2574#npm:7.5.3"],\
           ["@storybook/test-runner", "npm:0.15.1"],\
@@ -16933,6 +16934,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/cli", "npm:7.5.3"],\
           ["@storybook/components", "virtual:e30c29f3fc20545690ba4b983dd6bb250fd755d1379b171b8e7bda40cb14b92f4e63d197a164a2001d2c88184456fc70041c2a74b418c49523635ace79ba2574#npm:7.5.3"],\
           ["@storybook/manager-api", "virtual:e30c29f3fc20545690ba4b983dd6bb250fd755d1379b171b8e7bda40cb14b92f4e63d197a164a2001d2c88184456fc70041c2a74b418c49523635ace79ba2574#npm:7.5.3"],\
+          ["@storybook/preview-api", "npm:7.5.3"],\
           ["@storybook/react", "virtual:e30c29f3fc20545690ba4b983dd6bb250fd755d1379b171b8e7bda40cb14b92f4e63d197a164a2001d2c88184456fc70041c2a74b418c49523635ace79ba2574#npm:7.5.3"],\
           ["@storybook/react-webpack5", "virtual:e30c29f3fc20545690ba4b983dd6bb250fd755d1379b171b8e7bda40cb14b92f4e63d197a164a2001d2c88184456fc70041c2a74b418c49523635ace79ba2574#npm:7.5.3"],\
           ["@storybook/test-runner", "npm:0.15.1"],\

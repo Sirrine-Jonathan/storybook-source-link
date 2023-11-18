@@ -3987,7 +3987,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/preview-api@npm:7.5.3, @storybook/preview-api@npm:^7.0.0-beta.0 || ^7.0.0-rc.0 || ^7.0.0":
+"@storybook/preview-api@npm:7.5.3, @storybook/preview-api@npm:^7.0.0-beta.0 || ^7.0.0-rc.0 || ^7.0.0, @storybook/preview-api@npm:^7.5.3":
   version: 7.5.3
   resolution: "@storybook/preview-api@npm:7.5.3"
   dependencies:
@@ -13251,6 +13251,7 @@ __metadata:
     "@storybook/cli": "npm:^7.5.3"
     "@storybook/components": "npm:^7.5.3"
     "@storybook/manager-api": "npm:^7.5.3"
+    "@storybook/preview-api": "npm:^7.5.3"
     "@storybook/react": "npm:^7.5.3"
     "@storybook/react-webpack5": "npm:^7.5.3"
     "@storybook/test-runner": "npm:^0.15.1"

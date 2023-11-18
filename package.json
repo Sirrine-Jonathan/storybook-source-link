@@ -103,5 +103,8 @@
     ],
     "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
   },
-  "packageManager": "yarn@4.0.1"
+  "packageManager": "yarn@4.0.1",
+  "dependencies": {
+    "@storybook/preview-api": "^7.5.3"
+  }
 }
