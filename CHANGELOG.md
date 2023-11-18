@@ -1,3 +1,19 @@
+# v2.0.10 (Sat Nov 18 2023)
+
+#### 🐛 Bug Fix
+
+- Update to storybook 7 [#10](https://github.com/Sirrine-Jonathan/storybook-source-link/pull/10) ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+
+#### ⚠️ Pushed to `main`
+
+- New Version ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+
+#### Authors: 1
+
+- Jonathan ([@Sirrine-Jonathan](https://github.com/Sirrine-Jonathan))
+
+---
+
 # v2.0.9 (Sun May 28 2023)
 
 #### ⚠️ Pushed to `main`
