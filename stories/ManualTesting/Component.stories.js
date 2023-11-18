@@ -1,5 +1,4 @@
 import { Component } from './Component';
-import { parameters as previewParams } from '../../.storybook/preview'
 
 const componentParams = {
     sourceLinkPrefix: 'https://goo'
@@ -8,12 +7,11 @@ const componentParams = {
 export default {
     title: 'Manual Testing/With Component Params',
     component: Component,
-    parameters: componentParams
+    parameters: componentParams,
+    tags: ['autodocs']
 };
 
 const details = `
-    Preview sourceLinkPrefix: ${previewParams.sourceLinkPrefix}
-    Preview sourceLink: ${previewParams.sourceLink}
     Component sourceLinkPrefix: ${componentParams.sourceLinkPrefix}
     Component sourceLink: ${componentParams.sourceLink}
 `
