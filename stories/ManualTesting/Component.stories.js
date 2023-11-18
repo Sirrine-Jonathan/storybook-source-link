@@ -78,7 +78,7 @@ STORY_WITH_ONLY_PREFIX.parameters = {
     sourceLinkPrefix: 'https://raw.githubusercontent.com/Sirrine-Jonathan/storybook-source-link/main/stories/'
 }
 STORY_WITH_ONLY_PREFIX.args = {
-    expectedLink: 'https://raw.githubusercontent.com/Sirrine-Jonathan/storybook-source-link/main/stories/manualtesting/component.js',
+    expectedLink: 'https://raw.githubusercontent.com/Sirrine-Jonathan/storybook-source-link/main/stories/ManualTesting/Component.js',
     title: 'STORY_WITH_ONLY_PREFIX',
     notes: "Here's what happens if you supply sourceLinkPrefix to the story, but not a sourceLink, leaving it to inherit from the component or preview.",
     details: `
