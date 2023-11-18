@@ -15,9 +15,43 @@ npm install storybook-source-link
 ```
 <br />
 
+Add `storybook-source-code` to your addons array in the config object at `.storybook/main.js|ts`
+
+Example:
+
+```js
+import type { StorybookConfig } from "@storybook/nextjs";
+
+const config: StorybookConfig = {
+  stories: [
+    "../stories/**/*.mdx",
+    "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+  ],
+  addons: [
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-onboarding",
+    "@storybook/addon-interactions",
+    "storybook-source-link" // <-- add it here
+  ],
+  framework: {
+    name: "@storybook/nextjs",
+    options: {},
+  },
+  docs: {
+    autodocs: "tag",
+  },
+};
+
+export default config;
+```
+<br>
+Without any additional configuration,  
+you should see a new link in the toolbar like so:
+
+<br>
+
 ![Screen Shot 2022-03-23 at 1 15 50 PM](https://user-images.githubusercontent.com/24869532/159789033-8aaa0813-9434-458d-ae2f-c2aae36da426.png)  
-<small>Without any additional configuration,  
-you should see a new link in the toolbar</small>
 
 <h2 id="usage">Usage</h2>
 
