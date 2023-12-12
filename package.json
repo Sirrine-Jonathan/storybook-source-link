@@ -106,7 +106,7 @@
   "packageManager": "yarn@4.0.1",
   "dependencies": {
     "@storybook/preview-api": "^7.5.3",
-    "@types/react": "^18.2.37",
+    "@types/react": "^18.2.38",
     "react-error-boundary": "^4.0.11"
   }
 }
