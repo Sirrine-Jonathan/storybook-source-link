@@ -7,6 +7,13 @@
 
 Provides a link to the story's source in the toolbar.
 
+<h2 id="support">Support</h2>
+
+Any support you give will greatly help me to maintain and improve this addon. Thanks!
+
+[![Twitter Follow](https://img.shields.io/twitter/follow/Enirrisky)](https://twitter.com/Enirrisky?ref_src=twsrc%5Etfw)
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/sirrineprog)
 
 <h2 id="installation">Installation</h2>
 
@@ -288,8 +295,3 @@ export const parameters = {
 |                               |                         |                           |                     | link to info                    |
 
 
-
-
-[![Twitter Follow](https://img.shields.io/twitter/follow/Enirrisky)](https://twitter.com/Enirrisky?ref_src=twsrc%5Etfw)
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/sirrineprog)
