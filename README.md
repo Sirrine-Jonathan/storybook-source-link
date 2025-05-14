@@ -7,6 +7,8 @@
 
 Provides a link to the story's source in the toolbar.
 
+> **Compatibility Note**: Version 5.0.0 and above is compatible with Storybook 8. For Storybook 7, use version 4.x.
+
 <h2 id="support">Support</h2>
 
 Any support you give will greatly help me to maintain and improve this addon. Thanks!

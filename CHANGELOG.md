@@ -1,3 +1,18 @@
+# v5.0.0 (Storybook 8 Compatibility Update)
+
+#### Major Changes
+
+- Updated dependencies to support Storybook 8
+- Changed `types.TOOLEXTRA` to `types.TOOL` in manager.ts for Storybook 8 compatibility
+- Removed unnecessary type casting in Tool.tsx
+- Added `compatibleWithStorybook` field to package.json
+
+#### Authors: 1
+
+- Storybook Team
+
+---
+
 # v2.0.9 (Sun May 28 2023)
 
 #### ⚠️ Pushed to `main`

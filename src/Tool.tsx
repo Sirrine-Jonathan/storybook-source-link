@@ -1,5 +1,5 @@
 import React from "react";
-import { Icons, IconButton, TooltipMessage, WithTooltip } from "@storybook/components";
+import { Icons, IconButton, TooltipMessage, WithTooltip, IconsId } from "@storybook/components";
 import { PARAM_KEY, PREFIX_PARAM_KEY, ICON_PARAM_KEY, INFO_LINK, TOOL_ID } from "./constants";
 import { useParameter } from '@storybook/manager-api';
 
@@ -24,7 +24,7 @@ export const getLink = (prefix: string | undefined, link: string | undefined) =>
 export const Tool = () => {
   let param_link = useParameter(PARAM_KEY, null)
   let param_prefix = useParameter(PREFIX_PARAM_KEY, null)
-  let param_icon = useParameter(ICON_PARAM_KEY, "repository");
+  let param_icon = useParameter(ICON_PARAM_KEY, "repository") as IconsId;
   const link = getLink(param_prefix, param_link)
 
   return (
@@ -40,7 +40,7 @@ export const Tool = () => {
       }}
       aria-label={`View Source Repository: ${link}`}
     >
-      <Icons icon={param_icon as any} />
+      <Icons icon={param_icon} />
     </IconButton>
     :
     <WithTooltip placement="top" trigger="click" tooltip={<Tooltip />}>
@@ -49,7 +49,7 @@ export const Tool = () => {
         title="View Source Repository"
         active={false}
       >
-        <Icons icon={param_icon as any} />
+        <Icons icon={param_icon} />
       </IconButton>
     </WithTooltip>
   );
