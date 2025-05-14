@@ -40,7 +40,7 @@ export const Tool = () => {
       }}
       aria-label={`View Source Repository: ${link}`}
     >
-      <Icons icon={param_icon as any} />
+      <Icons icon={param_icon} />
     </IconButton>
     :
     <WithTooltip placement="top" trigger="click" tooltip={<Tooltip />}>
@@ -49,7 +49,7 @@ export const Tool = () => {
         title="View Source Repository"
         active={false}
       >
-        <Icons icon={param_icon as any} />
+        <Icons icon={param_icon} />
       </IconButton>
     </WithTooltip>
   );
